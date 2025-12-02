@@ -1,0 +1,18 @@
+# --- Build & CMake ---
+Build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake 
+Makefile 
+
+# --- Clangd & IDE ---
+compile_commands.json
+.clangd/
+.cache/
+
+# --- Executables & Objects ---
+riscv_emu
+*.o
+*.a
+*.so
+
