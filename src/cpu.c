@@ -5,8 +5,6 @@
 #include <sys/types.h>
 
 void exec_addi(RISCV_CPU *cpu, uint32_t inst);
-void exec_sw(RISCV_CPU *cpu, uint32_t inst);
-void exec_jal(RISCV_CPU *cpu, uint32_t inst);
 
 void cpu_exec(RISCV_CPU *cpu, uint32_t inst) {
   uint32_t opcode = GET_OPCODE(inst);
@@ -15,14 +13,6 @@ void cpu_exec(RISCV_CPU *cpu, uint32_t inst) {
   switch (opcode) {
   case OP_ALU_I: // 0x13
     exec_addi(cpu, inst);
-    break;
-
-  case OP_STORE: // 0x23
-    exec_sw(cpu, inst);
-    break;
-
-  case OP_JAL: // 0x6F
-    exec_jal(cpu, inst);
     break;
 
   default:

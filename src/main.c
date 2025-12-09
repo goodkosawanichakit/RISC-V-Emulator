@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-  RISCV_CPU *cpu;
+  RISCV_CPU cpu;
 
   return 0;
 }
